@@ -6231,3 +6231,30 @@ label,
 .checkbox label {
   font-weight: 300;
 }
+
+footer {
+  width:100px;
+  height:100px;
+  bottom: 0;
+  position: fixed;
+}
+
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+.row > [class*='col-'] {
+   display: flex;
+   flex-direction: column;
+}
+
+#cover {
+  position: fixed; height: 100%;
+  width: 100%; 
+  top:0; 
+  left: 0; 
+  background:#000; 
+  z-index:9999;
+}

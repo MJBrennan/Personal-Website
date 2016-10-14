@@ -4,9 +4,12 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Laravel</title>
+	<title>MJBrennan.me</title>
 
 	<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+
+	<link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />
+
 
 	<!-- Fonts -->
 	<link href='//fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
@@ -19,20 +22,20 @@
 	<![endif]-->
 </head>
 <body>
-	 <nav class="navbar navbar-default navbar-fixed-top"  style="min-height: 80px"   >
+	 <nav class="navbar navbar-default navbar-fixed-top">
   
 		<div class="container">
 			<div class="navbar-header">
 			
-			<a class="navbar-brand">MJBrennan</a>
+			<a class="navbar-brand"><b>MJBrennan</b></a>
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-			<li ><a href="{{url('Home')}}">Home</a></li>
-			<li id="main"><a href="{{url('Blog')}}">Blog</a></li>
-			<li ><a href="{{url('Tweets')}}">Tweets</a></li>
-			<li ><a href="{{url('Portfolio')}}">Portfolio</a></li>
-			<li id="contact"><a href="#">Contact</a></li>
+			<li ><a href="{{url('Home')}}"><b>Home</b></a></li>
+			<li id="main"><a href="{{url('Blog')}}"><b>Blog</b></a></li>
+			<li ><a href="{{url('Tweets')}}"><b>Tweets</b></a></li>
+			<li ><a href="{{url('Portfolio')}}"><b>Portfolio</b></a></li>
+			<li id="contact"><a href="#"><b>Contact</b></a></li>
 
 			</ul>
 			</div>
@@ -40,9 +43,34 @@
 	</nav>
 	<br>
 	<br>
-	<br>
-	<br>
-	<br>
+
+
+	@if(Session::has('flash_message'))
+
+		<div class="alert alert-success">
+		{{Session::get('flash_message') }}
+		</div>
+		@endif
+
+
+	@if (count($errors)  > 0)	
+
+	<div class="alert alert-danger">
+	Error!<br>
+<ul>
+	@foreach ($errors->all()  as $error)
+
+
+		<h1>{{$error}}</h1>
+		
+	@endforeach
+
+	</ul>
+
+	</div>
+
+	@endif
+
 
 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -80,12 +108,27 @@
 
 	@yield('content')
 
-	<!-- Scripts -->
+
+<div class="navbar navbar-default navbar-fixed-bottom" >
+    <div class="container">
+      <p class="navbar-text pull-left">© 2016 - Site Built By Michael Brennan
+           <a href="http://tinyurl.com/tbvalid" target="_blank">HTML 5 Validation</a>
+      </p>
+     
+    </div>
+    
+    
+  </div>
 
 
-	
+
+  
+
+
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
 
 	<script>
 
@@ -112,27 +155,27 @@
 		    success: function(result){
 		      if(result === "Mail Sent"){
 		       alert("Mail Sent");
+		       $("#myModal").modal('hide');
+
 		      }else{
-		        alert("Mail Not Sent");
+		        alert("Mail Not Sent Please Try Again Later");
 		      }
 
-		    }
+		  	  }
 
 
-		});
+			});
 
-	 });	 
-
-
-
-
-
+		 });	 
 	});
 
 
 	</script>
 
 	@yield('scripts')
+
+
+
 
 
 

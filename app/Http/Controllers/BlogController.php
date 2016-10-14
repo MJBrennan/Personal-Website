@@ -31,7 +31,10 @@ class BlogController extends Controller {
 	 */
 	public function create()
 	{
-		//
+
+		return view('new');
+
+
 	}
 
 	/**
@@ -39,9 +42,26 @@ class BlogController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
 		//
+
+		$blogData = new Blog;
+
+		$blogData->title = $request->get("title");
+		$blogData->content = $request->get("content");
+		$blogData->date = $request->get("date");
+
+		$blogData->save();
+
+		$request->session()->flash('flash_message','Record Added');
+
+		return redirect()->back();
+
+
+
+
+
 	}
 
 	/**
@@ -53,6 +73,11 @@ class BlogController extends Controller {
 	public function show($id)
 	{
 		//
+
+		$mainText = Blog::findOrFail($id);
+
+   		return  view('show')->with('main',$mainText);
+
 	}
 
 	/**
@@ -83,7 +108,7 @@ class BlogController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function showall($id)
 	{
 		//
 	}

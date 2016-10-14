@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\twitterclass;
+
 class MainTweetsController extends Controller {
 
 	/**
@@ -27,9 +29,13 @@ class MainTweetsController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function load()
 	{
-		//
+
+		$twitter = new TwitterClass();
+
+		echo $twitter;
+
 	}
 
 	/**

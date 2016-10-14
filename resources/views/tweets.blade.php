@@ -2,10 +2,29 @@
 
 
 @section('content')
-	
-	<h1>Tweets</h1>
 
 
+    <div id="cover1" style="color:#fff; width:700px; height:700px">
+
+
+      </div>
+    <div class="row">
+
+    <div class="col-lg-2 col-centered"  style="background-color:#D0D0D0;">
+    
+     </div>
+
+    <div class="col-lg-8 col-centered"  style="background-color:#ffffff;">
+        
+    <div class="panel panel-default">
+    <div class="panel-body">
+
+    <center><h1>My Latest Tweets</h1></center>
+
+    </div>
+
+    </div>
+  
 
 
 
@@ -14,7 +33,14 @@
 
 
 
-        </div>
+            </div>
+     </div>
+
+      <div class="col-lg-2 col-centered"  style="background-color:#D0D0D0;">
+    
+     </div>
+</div>
+
 
 
 
@@ -28,9 +54,11 @@
 
 <script>
 
+//$(window).on('load',                )
 
+$(window).ready(function() {
 
-$(document).ready(function() {
+   $("#cover1").show();
 
 	
     var url = 'http://localhost/TwitterLib/twitterimpl.php';
@@ -41,9 +69,14 @@ $(document).ready(function() {
               var name = data[i].text;
 
             $("#twitter-feed").append('<p>'+name+'</p><hr>');
-
-
         }
+
+        $("#cover1").hide();
+
+
+
+
+        
     });
 
 

@@ -6,7 +6,9 @@
 	"type": "project",
 	"require": {
 		"laravel/framework": "5.0.*",
-		"jgrossi/corcel": "^1.1"
+		"jgrossi/corcel": "^1.1",
+		"j7mbo/twitter-api-php": "dev-master"
+		
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
@@ -15,6 +17,7 @@
 	"autoload": {
 		"classmap": [
 			"database"
+			
 		],
 		"psr-4": {
 			"App\\": "app/"
@@ -23,6 +26,7 @@
 	"autoload-dev": {
 		"classmap": [
 			"tests/TestCase.php"
+			
 		]
 	},
 	"scripts": {

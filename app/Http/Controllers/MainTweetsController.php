@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-use App\twitterclass;
+use App\Classes\Test;
 
 class MainTweetsController extends Controller {
 
@@ -32,9 +32,7 @@ class MainTweetsController extends Controller {
 	public function load()
 	{
 
-		$twitter = new TwitterClass();
-
-		echo $twitter;
+		$data = new Test();
 
 	}
 
@@ -46,6 +44,10 @@ class MainTweetsController extends Controller {
 	public function store()
 	{
 		//
+		$data = "Text";
+
+		echo $data;
+		
 	}
 
 	/**

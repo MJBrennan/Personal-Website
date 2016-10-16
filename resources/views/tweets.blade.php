@@ -24,27 +24,17 @@
     </div>
 
     </div>
-  
-
 
 
     <div id="twitter-feed">
-
-
-
 
             </div>
      </div>
 
       <div class="col-lg-2 col-centered"  style="background-color:#D0D0D0;">
+      
     
      </div>
-</div>
-
-
-
-
-
 
 
 	 @endsection
@@ -53,15 +43,17 @@
 @section('scripts')
 
 <script>
-
-//$(window).on('load',                )
+            
 
 $(window).ready(function() {
 
-   $("#cover1").show();
+    var url = './tweetscall';
 
-	
-    var url = 'http://localhost/TwitterLib/twitterimpl.php';
+      $.ajaxSetup({
+      headers: {
+    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      }
+       });
 
     $.getJSON(url,function(data){
     for(var i = 0; i< data.length; i++){
@@ -71,18 +63,8 @@ $(window).ready(function() {
             $("#twitter-feed").append('<p>'+name+'</p><hr>');
         }
 
-        $("#cover1").hide();
-
-
-
-
-        
+        $("#cover1").hide(); 
     });
-
-
-
-
-
 });
 
 

@@ -19,7 +19,11 @@ Route::get('/error', function(){
 
 
 
-Route::post('tweets-call', 'MainTweetsController@load');
+Route::get('/tweetscall', 'MainTweetsController@load');
+
+Route::get('simple', 'MainTweetsController@store');
+
+
 
 Route::get('Home','MainController@index');
 
@@ -35,6 +39,10 @@ Route::get('Tweets','MainTweetsController@index');
 Route::get('new','BlogController@create');
 
 Route::post('info','BlogController@store');
+
+Route::get('class','MainTweetsController@load');
+
+
 
 Route::resource('Blog', 'BlogController');
 

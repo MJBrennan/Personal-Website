@@ -1,8 +1,10 @@
 <?php
 
-	namespace App\Classes;
+	//namespace App\Classes;
 
 	//use TwitterAPIExchange;
+
+include("twitterapiphpmaster/TwitterAPIExchange.php");
 	
 	class TwitterClass{
 		
@@ -27,7 +29,7 @@
 			$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 			$getfield = '?screen_name=mike90901&count=20';
 			$requestMethod = 'GET';
-			$twitter = new TwitterAPIExchange($this->settings);
+			$twitter = new \TwitterAPIExchange($this->settings);
 			echo ($twitter->setGetfield($getfield)
 						 ->buildOauth($url,$requestMethod)
 						 ->performRequest()

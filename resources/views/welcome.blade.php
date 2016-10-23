@@ -31,9 +31,8 @@
  	<div class="panel-header">	<p><b>Project Title: </b><br>{{$project->project}}<p></div><hr>
  		<p><b>Project URL: </b><br>{{$project->url}}<p><hr>
  		<p><b>Project Description: </b><br>{{$project->description}}<p><hr>
+ 		<p><b>Project Image: </b><br><img src="{{$project->image}}" width="300" height="300"></img><hr>
  		
-
-
  		@endforeach
 
  		</div>

@@ -15,23 +15,21 @@
   <div class="jumbotron">
 
  <center> <div class="panel panel-default" style="width: 700px">
- 	 <div class="panel-body"><h3>Thank you for visiting my Personal Website</h3></div>
+ 	 <div class="panel-body"><h3>Personal Website of Michael Brennan</h3></div>
 		</div></center>
 
  <div style="width: 100%; overflow: hidden;">
 
     <div style="width: 400px; float: left; padding: 20px"> 
 
-    	 <p> In 1918, having been discharged from bankruptcy, he re-entered parliament and launched a fraudulent "Victory Bonds" scheme which led to his conviction and imprisonment in 1922
-
-    	 </p>
+    	 <p> Hi thank you for visiting my Website please have a look around I am a young software 
+       engineer with a major interest in Full Stack PHP Developemt. In addition I am an avid runner with a eye for collecting rare vinyl records</p>
 
 
      </div>
-    <div style="width: 300px; float: right; padding: 20px"> 
+    <div style="width: 400px; float: right;"> 
 
-    <p>Genetic analysis shows that the giraffe genus, previously thought to contain one extant species, actually consists of four.</p>
-
+    <img src="\new-project2\resources\placeholder.jpg" style="width: 250px; height: 250px; float: left;border: 5px solid;"/> 
     </div>
 
 </div>
@@ -47,7 +45,7 @@
   <div class="panel-body"><b>Skills:</b></div>
 </div></center>
 
-   <p style="padding: 10px;">Genetic analysis shows that the giraffe genus, previously thought to contain one extant species, actually consists of four.</p>
+   <p><ul><li>PHP Development</li><li>Android Developemt</li> <li>Javascript/JQuery</li><li>MySQL</li> <li>Git</li></ul></p>
 
 
  </div>
@@ -62,7 +60,7 @@
   <div class="panel-body"><b>Interests</b></div>
 </div></center>
 
-   <p style="padding: 10px;">Genetic analysis shows that the giraffe genus, previously thought to contain one extant species, actually consists of four.</p>
+ <p><ul><li>Running</li><li>Walking</li> <li>Bass Guitar</li><li>Drawing</li> <li>Philantropy</li></ul></p>
 
 
  </div>
@@ -77,7 +75,14 @@
  	 <div class="panel-body"><b>Links:</b></div>
 		</div></center>
 
- 	 <center><p>Life on The Road!</p></center>
+ 	 <center><img src="\new-project2\resources\github.png" style="width: 75px;height:75px;" class="img-rounded"</>&ensp;&ensp;&ensp;&ensp;&ensp;
+
+    <img src="\new-project2\resources\twitter.jpg" style="width: 75px;height:75px;" class="img-rounded"</>&ensp;&ensp;&ensp;&ensp;
+
+    <img src="\new-project2\resources\insta.jpg" style="width: 75px;height:75px;" class="img-rounded"</>
+
+
+   </center>
 
  	</div>
 

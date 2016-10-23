@@ -1,10 +1,10 @@
 <?php
 
-	
 	namespace App\Classes;
 
+	class Test
 
-	class Test{
+	{
 		
 		//Required for connecting to Twitter API
 		
@@ -17,12 +17,14 @@
 		
 		);
 		
-		public function __construct(){
+		public function __construct()
+		{
 			//$this->twitterName = $twitterName;
 			$this->getDetails();
 		}
 		
-		public function getDetails(){
+		public function getDetails()
+		{
 			
 			$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 			$getfield = '?screen_name=mike90901&count=20';
@@ -35,7 +37,7 @@
 		}
 	}
 
-
+	$data = new Test();
 
 
 

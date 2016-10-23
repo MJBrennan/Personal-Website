@@ -24,7 +24,7 @@
 	<![endif]-->
 </head>
 <body>
-	 <nav class="navbar navbar-default navbar-fixed-top">
+	 <nav id="top" class="navbar navbar-default navbar-fixed-top">
   
 		<div class="container">
 			<div class="navbar-header">
@@ -135,6 +135,15 @@
 	<script>
 
 	$(document).ready(function(){
+
+
+		$(".nav a").on("click", function(){
+			
+  		$(".nav").find(".active").removeClass("active");
+ 		$(this).parent().addClass("active");
+
+
+			});
 
 
 		$("#contact").click(function(){

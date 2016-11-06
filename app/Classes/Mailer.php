@@ -1,7 +1,5 @@
 <?php
 
-		//namespace App\Classes;
-
 	include("PHPMailer-Master/PHPMailerAutoload.php");
 
 		class Mailer{
@@ -21,12 +19,12 @@
 			$mail->Host = "smtp.gmail.com";
 			$mail->Port = 465; // or 587
 			$mail->IsHTML(true);
-			$mail->Username = "#YourEmail";
-			$mail->Password = "#YourPass";
+			$mail->Username = "mike7149@gmail.com";
+			$mail->Password = "ndrake12";
 			$mail->SetFrom("main@gmail.com");
 			$mail->Subject = "Message From MJBrennan.me";
 			$mail->Body = $body;
-			$mail->AddAddress("#Add Destination");
+			$mail->AddAddress("mike7149@gmail.com");
 
 
 
@@ -41,9 +39,4 @@
 
 		}
 
-
-		//$mail = new Mailer($_POST["body"]);
-
-		//echo ($mail);
-
-		$mail = new Mailer("Mailer");
+		$mail = new Mailer($_POST['body']);

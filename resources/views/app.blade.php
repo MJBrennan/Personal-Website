@@ -91,7 +91,7 @@
 		</div>
 		<div class="form-group">
   		<label for="pwd">Email Address:</label>
- 		<input type="password" class="form-control" id="address">
+ 		<input type="text" class="form-control" id="address">
 		</div>
 
       	<div class="form-group">
@@ -155,13 +155,21 @@
 
 		$("#send").click(function(){
 
-		var mailText = $("#body").val();
+		var mailText = $("#name").val();
+		 mailText += $("#address").val();
+		 mailText += $("#body").val();
+
+		$.ajaxSetup({
+     	 headers: {
+    	'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+      	}
+        });
 
 		 $.ajax({  
 
 		    type: "POST",
-		    url: "http://localhost/MailerEx/mailerex.php",
-		    data: {"body": mailText},
+		    url: "http://localhost/new-project2/app/Classes/Mailer.php",
+		    data: {"body": mailText },
 		    cache: false,
 		    success: function(result){
 		      if(result === "Mail Sent"){

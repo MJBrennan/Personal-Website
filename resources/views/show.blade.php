@@ -2,9 +2,9 @@
 
 @section('content')
 
-<div class="row">
+<div id="row1" class="row">
 
-<div class="col-lg-2 col-centered" style="background-color:#D0D0D0;">
+<div class="col-lg-2 col-centered" style="background-color:#000000;">
     
      </div>
   <div class="col-lg-8 col-centered" style="background-color:#ffffff;" >
@@ -19,8 +19,7 @@
 <b class="bold">Date Posted: {{$main->date}}</b>
 
 
-<hr>
-
+			<hr>
 		</div>
 	</div>
 
@@ -28,9 +27,38 @@
 	
 	</div>
 
-	<div class="col-lg-2 col-centered" style="background-color:#D0D0D0;">
+	<div class="col-lg-2 col-centered" style="background-color:#000000;">
     
      </div>
 </div>
 
+
+
 @stop
+
+ @endsection
+
+
+@section('scripts')
+
+<script>
+            
+
+$(window).ready(function(){
+
+	//console.log($("#row1").height());
+	var win = $(window).height();
+
+	if($("#row1").height() < 600){
+
+		$("#row1").height(win);
+
+	}
+
+});
+
+
+</script>
+
+
+ @endsection

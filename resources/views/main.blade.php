@@ -4,7 +4,7 @@
 
 	 <div class="row row-eq-height">
 
-    <div class="col-lg-2 col-centered" style="background-color:#D0D0D0;">
+    <div class="col-lg-2 col-centered" style="background-color:#000000; border-color:#E7E7E7;">
     
      </div>
 
@@ -29,7 +29,7 @@
      </div>
     <div style="width: 400px; float: right;"> 
 
-    <img src="\new-project2\resources\placeholder.jpg" style="width: 250px; height: 250px; float: left;border: 5px solid;"/> 
+    <img src="\new-project2\resources\placeholder.jpg" style="width: 250px; height: 250px; float: left;border: 5px solid; border-color:#E7E7E7"/> 
     </div>
 
 </div>
@@ -75,11 +75,11 @@
  	 <div class="panel-body"><b>Links:</b></div>
 		</div></center>
 
- 	 <center><img src="\new-project2\resources\github.png" style="width: 75px;height:75px;" class="img-rounded"</>&ensp;&ensp;&ensp;&ensp;&ensp;
+ 	 <center><a href="http://www.github.com/mjbrennan"><img src="\new-project2\resources\github.png" style="width: 75px;height:75px;" class="img-rounded"</></a>&ensp;&ensp;&ensp;&ensp;&ensp;
 
-    <img src="\new-project2\resources\twitter.jpg" style="width: 75px;height:75px;" class="img-rounded"</>&ensp;&ensp;&ensp;&ensp;
+    <a href="http://www.twitter.com/mike90901"><img src="\new-project2\resources\twitter.jpg" style="width: 75px;height:75px;" class="img-rounded"</></a>&ensp;&ensp;&ensp;&ensp;
 
-    <img src="\new-project2\resources\insta.jpg" style="width: 75px;height:75px;" class="img-rounded"</>
+   <a href="http://www.instagram.com/nothing"> <img src="\new-project2\resources\insta.jpg" style="width: 75px;height:75px;" class="img-rounded"</></a>
 
 
    </center>
@@ -92,7 +92,7 @@
 	</div>
 
 
-    <div class="col-lg-2 col-centered" style="background-color:#D0D0D0;">
+    <div class="col-lg-2 col-centered" style="background-color:#000000; border-color:#E7E7E7;">
 
 
 
